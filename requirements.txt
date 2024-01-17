@@ -1,0 +1,12 @@
+openai
+termcolor
+tiktoken
+pyautogui
+matplotlib
+scipy
+scikit-learn
+plotly
+pyaudio
+open-interpreter
+pathspec
+bs4

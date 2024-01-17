@@ -1,0 +1,21 @@
+# Compiled Python files
+*.pyc
+
+# Python cache files
+__pycache__/
+
+# Virtual environment
+env/
+
+# Ignore all .txt files except requirements.txt
+*.txt
+!requirements.txt
+
+# JSON files
+*.json
+
+# Specific directories
+swarm_works/
+web_searches/
+reports/
+tests/
