@@ -8,4 +8,5 @@ scikit-learn
 plotly
 open-interpreter
 pathspec
+pyaudio
 bs4
