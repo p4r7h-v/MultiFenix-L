@@ -6,7 +6,7 @@ matplotlib
 scipy
 scikit-learn
 plotly
-pyaudio
 open-interpreter
 pathspec
+pyaudio
 bs4

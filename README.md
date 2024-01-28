@@ -13,9 +13,51 @@ MultiFenix-L is an Advanced AI Assistant capable of a wide range of tasks such a
 - **user_input_manager.py**: Processes and handles user input.
 - **voice_control.py**: Handles any voice interactions if they are part of this project.
 
-## Usage
-Fenix A.G.I operates using a chat-based user interface. As the user, you communicate with the assistant by inputting your directions in the form of chat messages.
+## Getting Started
 
+### Prerequisites
+
+- Python 3.6 or higher
+- pip package manager
+
+### Installation
+
+1. Clone the repository:
+
+   ```
+   git clone https://github.com/p4r7h-v/MultiFenix-L
+   ```
+2. Navigate to the project directory:
+   ```
+   cd MultiFenix-L
+   ```
+3. Install the required dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+Note: MacOS has issues with PyAudio, so ask ChatGPT how to get that installed.
+
+### API Key Setup
+
+Fenix uses three API keys for its functionality. Follow the instructions below to set up the required API keys:
+
+- **Bing API Key**:
+  - Obtain a Bing API Key from the [Microsoft Azure portal](https://www.microsoft.com/en-us/bing/apis/bing-web-search-api).
+  - Set the obtained API Key as the `BING_API_KEY` environment variable.
+
+- **OpenAI API Key**:
+  - Sign up for an account on the [OpenAI website](https://platform.openai.com).
+  - Generate an API Key from the API section of your OpenAI account.
+  - Set the generated API Key as the `OPENAI_API_KEY` environment variable.
+
+
+### Usage
+
+1. Run Fenix:
+   ```
+   python fenix_agi.py
+   ```
+   
 ### Available Tasks:
 Fenix A.G.I is capable of performing a variety of tasks including but not limited to:
 - Reading and writing files
