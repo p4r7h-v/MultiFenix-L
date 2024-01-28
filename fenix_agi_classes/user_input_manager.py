@@ -3,7 +3,7 @@ import json
 from fenix_agi_classes.voice_control import record_audio
 
 class UserInputManager:
-    def __init__(self, message_manager,multi_line_mode=False, model='gpt-4-1106-preview',voice_mode=False):
+    def __init__(self, message_manager,multi_line_mode=False, model='gpt-4-0125-preview',voice_mode=False):
         self.message_manager = message_manager
         self.multi_line_mode = False
         self.model = model
@@ -76,12 +76,12 @@ class UserInputManager:
             self.show_help()
             return None, True
         elif user_input.lower() == 'switch':
-            if self.model == 'gpt-4-1106-preview':
+            if self.model == 'gpt-4-0125-preview':
                 self.model = 'gpt-3.5-turbo-16k'
                 print(colored("Model changed to gpt-3.5-turbo-16k", 'green'))
             else:
-                self.model = 'gpt-4-1106-preview'
-                print(colored("Model changed to gpt-4-1106-preview", 'green'))
+                self.model = 'gpt-4-0125-preview'
+                print(colored("Model changed to gpt-4-0125-preview", 'green'))
             return None, True
         elif user_input == 'add system message':
             print(colored("Enter your multi-line system message. Type 'done' on a new line to finish.", 'magenta'))

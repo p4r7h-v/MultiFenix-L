@@ -2,7 +2,6 @@ import os
 from interpreter import interpreter
 import pyautogui
 import time
-from termcolor import colored
 from swarmGPT import GPTSwarm, OpenAIApiCaller
 from openai import OpenAI
 import requests
@@ -88,7 +87,7 @@ def start_fenix_agi(system_message: str) -> str:
 
 def call_swarm(user_message: str) -> str:
     '''Use this only when user has asked you to utilize the swarm or swarm gpt to complete a task. You are prohibited from calling this unless the user asks for you to call this function specifically.'''
-    print(colored("...INITIALIZING SWARM...", "red"))
+    print("...INITIALIZING SWARM...", )
     user_message = user_message
     gpt_api_caller = OpenAIApiCaller()
     swarm = GPTSwarm(user_message, gpt_api_caller)

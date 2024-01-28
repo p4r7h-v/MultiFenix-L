@@ -147,5 +147,5 @@ class MainInterface:
 
 
 if __name__ == '__main__':
-    interface = MainInterface('gpt-4-1106-preview')
+    interface = MainInterface('gpt-4-0125-preview')
     interface.interact()
