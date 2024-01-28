@@ -1,6 +1,6 @@
 from termcolor import colored
 import json
-from fenix_agi_classes.voice_control import record_audio
+from subclasses.voice_control import record_audio
 
 class UserInputManager:
     def __init__(self, message_manager,multi_line_mode=False, model='gpt-4-0125-preview',voice_mode=False):

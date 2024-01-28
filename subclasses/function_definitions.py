@@ -1,7 +1,7 @@
 import inspect
 
 # Import the functions from functions.py
-from fenix_agi_classes import functions
+from subclasses import functions
 
 class FunctionDefinitionGenerator:
 

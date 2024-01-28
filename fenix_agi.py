@@ -11,11 +11,11 @@ openai.api_key = os.getenv("OPENAI_API_KEY") or "Your API Key Here"
 
 
 # Import functions and their definitions/mappings
-from fenix_agi_classes import functions
-from fenix_agi_classes.function_definitions import function_definitions, function_mapping
-from fenix_agi_classes.user_input_manager import UserInputManager
-from fenix_agi_classes.message_manager import MessageManager
-from fenix_agi_classes.gpt_call import GPTSession
+from subclasses import functions
+from subclasses.function_definitions import function_definitions, function_mapping
+from subclasses.user_input_manager import UserInputManager
+from subclasses.message_manager import MessageManager
+from subclasses.gpt_call import GPTSession
 
 # !!! WHEN YOU ARE ASKING FENIX AGI TO START OTHER INSTANCES OF FENIX AGI DO NOT MOVE THE WINDOWS AROUND WHILE THEY ARE BEING CREATED OR THIS MIGHT RESULT ON INSTRUCTION NOT BEING PROPERLY ADDED TO CDM PROMPT WINDOW SINCE WE ARE USING PYAUTOGUI !!!
 
