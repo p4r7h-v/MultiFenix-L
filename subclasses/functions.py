@@ -98,7 +98,7 @@ def call_swarm(user_message: str) -> str:
 
 def bing_search_save(file_name, query):
     '''Use this only when user has asked you to utilize a web search engine to complete a task. You are prohibited from calling this unless the user asks for you to call this function specifically'''
-    subscription_key = os.getenv("BING_SEARCH_KEY")
+    subscription_key = os.getenv("BING_API_KEY")
     base_url = "https://api.bing.microsoft.com/v7.0/search"
     headers = {"Ocp-Apim-Subscription-Key": subscription_key}
     params = {"q": query, "count": 50, "offset": 0, "freshness": "Month"}
