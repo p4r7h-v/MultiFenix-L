@@ -6,6 +6,7 @@ __pycache__/
 
 # Virtual environment
 env/
+.env
 
 # Ignore all .txt files except requirements.txt
 *.txt

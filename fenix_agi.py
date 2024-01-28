@@ -3,11 +3,14 @@ import json
 from termcolor import colored
 import traceback
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 
 # set your openai api key here or in the environment variable OPENAI_API_KEY
-openai.api_key = os.getenv("OPENAI_API_KEY") or "Your API Key Here"
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 # Import functions and their definitions/mappings
