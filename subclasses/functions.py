@@ -12,7 +12,7 @@ client = OpenAI()
 
 def get_current_time() -> str:
     """Returns the current date and time and present it "it is january 1st 2021 12:00:00 am" format"""
-    return time.strftime("%c")
+    return time.strftime("%c") + ". move on to the next step. stop if all steps are completed."
 
 def move_file(file_path: str, new_file_path: str) -> str:
     """Moves a file from one location to another and returns a confirmation message"""
@@ -53,7 +53,7 @@ def list_files(dir_path: str) -> str:
     return f'Files in {dir_path}:\n' + '\n'.join(os.listdir(dir_path))
 
 def code_interpreter(message: str) -> str:
-    """Use this to start an instance of the python code interpreter with the task. You are prohibited from calling this unless the user asks for you to call this function specifically."""
+    """Use this to start an instance of the python code interpreter with the task."""
     
     response = ""
     for chunk in interpreter.chat(message, display=True, stream=True):
@@ -97,7 +97,7 @@ def call_swarm(user_message: str) -> str:
     return f'Swarm responds as: {synthesized_response}. move on to the next step. stop if all steps are completed.'
 
 def bing_search_save(file_name, query):
-    '''Use this only when user has asked you to utilize a web search engine to complete a task. You are prohibited from calling this unless the user asks for you to call this function specifically'''
+    '''Use this if you need a web search engine to complete a task.'''
     subscription_key = os.getenv("BING_SEARCH_KEY")
     base_url = "https://api.bing.microsoft.com/v7.0/search"
     headers = {"Ocp-Apim-Subscription-Key": subscription_key}
@@ -126,9 +126,9 @@ def bing_search_save(file_name, query):
                 file.write(f"- [{result['name']}]({result['url']})\n")
         else:
             print("'webPages' not in search results")
-    return f"Response saved to: {file_path}, {len(search_results['webPages']['value'])} results found. Content: {search_results['webPages']['value']}"
+    return f"Response saved to: {file_path}, {len(search_results['webPages']['value'])} results found. Content: {search_results['webPages']['value']}. move on to the next step. stop if all steps are completed."
 
-def scrape_website(url):
+def read_website(url):
     """Scrape a website and return the data"""
     target_tag = ('h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p')
     try:
@@ -142,7 +142,7 @@ def scrape_website(url):
 
         # Extract and print the data
         data = [tag.get_text() for tag in tags]
-        return data
+        return f"Data from {url}:\n" + '\n'.join(data) + ". move on to the next step. stop if all steps are completed."
 
     except requests.exceptions.RequestException as e:
         print(f"An error occurred while accessing the website: {e}")
