@@ -58,7 +58,7 @@ class FunctionDefinitionGenerator:
 
             function_definition["parameters"]["properties"]["steps_remaining"] = {
                 "type": "string",
-                "description": "Very brief description of the remaining steps in this flow. 'all steps completed' if all steps are complete."
+                "description": "detailed description of the remaining steps in this flow with subtasks. 'all steps completed' if all steps are complete."
             }
 
             function_definition["parameters"]["required"].append("steps_remaining")
